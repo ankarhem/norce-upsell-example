@@ -2,8 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@changesets/cli': ^2.26.0
-  '@norce/checkout-lib': 0.1.0-pre.6
-  '@norce/module-adapter-svelte': 1.1.0-pre.11
+  '@norce/checkout-lib': 0.1.0-pre.8
+  '@norce/module-adapter-svelte': 1.1.0-pre.13
   '@sveltejs/vite-plugin-svelte': ^1.1.0
   '@tsconfig/svelte': ^3.0.0
   autoprefixer: ^10.4.13
@@ -24,8 +24,8 @@ specifiers:
 
 devDependencies:
   '@changesets/cli': 2.26.0
-  '@norce/checkout-lib': 0.1.0-pre.6
-  '@norce/module-adapter-svelte': 1.1.0-pre.11
+  '@norce/checkout-lib': 0.1.0-pre.8
+  '@norce/module-adapter-svelte': 1.1.0-pre.13
   '@sveltejs/vite-plugin-svelte': 1.4.0_svelte@3.55.1+vite@3.2.5
   '@tsconfig/svelte': 3.0.0
   autoprefixer: 10.4.13_postcss@8.4.21
@@ -333,14 +333,14 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@norce/checkout-lib/0.1.0-pre.6:
-    resolution: {integrity: sha512-+gr87e7xNAua8IZjG96mdRgUcciZv/ssRYYLrqI6obmuUkf3QK1+6uLPx21A5iGxpwuRBqf7ErSKckGVofgRew==}
+  /@norce/checkout-lib/0.1.0-pre.8:
+    resolution: {integrity: sha512-RN7NJNsGR4wccj8bj0/+MF7U5bbLQDWZrNxqwCVrtB1L0eBut+0QaM+tIwMO6Ym8wcf5tWUMQdOQ3XlZJ7SbhQ==}
     dependencies:
       openapi-typescript-fetch: 1.1.3
     dev: true
 
-  /@norce/module-adapter-svelte/1.1.0-pre.11:
-    resolution: {integrity: sha512-Mql/HE1DqG2u4Qb+gyxLE7VVqmQffQDS1bADhMEek9/hMomyY8rigzC3ddJilL1n5fm0TS59vp426V0KrMikQw==}
+  /@norce/module-adapter-svelte/1.1.0-pre.13:
+    resolution: {integrity: sha512-h+oT1HH9Fy2p4TGdVADTptlIqblQMnltw7IewiWq5YLXly7pTdpFVtrkaFfILWUy1cDhSuQNRyTPyAAAInXszg==}
     dev: true
 
   /@sveltejs/vite-plugin-svelte/1.4.0_svelte@3.55.1+vite@3.2.5:
