@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { createFormatter } from '@norce/checkout-lib';
+  import { TrackingEvents } from '@norce/analytics';
+  import { convertItemToGA4Item, createFormatter } from '@norce/checkout-lib';
   import type { MountProps } from '@norce/module-adapter-svelte';
   import { onMount } from 'svelte';
   import { addToCart, getProductsFromCatogory } from './jetshop';
@@ -7,7 +8,7 @@
 
   export let api: MountProps['api'];
   export let data: MountProps['data'];
-  // export let EventEmitter: MountProps['EventEmitter'];
+  export let track: MountProps['track'];
 
   const formatter = createFormatter(data.order.culture, data.order.currency);
 
@@ -72,7 +73,21 @@
             <button
               data-testid="norce-upsell-add-to-cart"
               class="bg-primary text-primary-content rounded py-2"
-              on:click={() => handleClick(product?.articleNumber)}
+              on:click={() => {
+                handleClick(product?.articleNumber);
+                track(TrackingEvents.AddToCart, {
+                  items: [
+                    {
+                      item_id: product?.articleNumber,
+                      item_name: product?.name,
+                      price: product?.price?.incVat,
+                      quantity: 1,
+                    },
+                  ],
+                  currency: data.order.currency,
+                  value: product.price?.incVat,
+                });
+              }}
             >
               {t('Add to cart')}
             </button>
