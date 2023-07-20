@@ -1,14 +1,15 @@
 <script lang="ts">
-  import { TrackingEvents } from '@norce/analytics';
-  import { convertItemToGA4Item, createFormatter } from '@norce/checkout-lib';
-  import type { MountProps } from '@norce/module-adapter-svelte';
-  import { onMount } from 'svelte';
-  import { addToCart, getProductsFromCatogory } from './jetshop';
-  import { culture, t } from './translations';
+  import { TrackingEvents } from "@norce/analytics";
+  import { createFormatter } from "@norce/checkout-lib";
+  import type { TranslationsFn } from "@norce/checkout-lib";
+  import type { MountProps } from "@norce/module-adapter-svelte";
+  import { addToCart, getProductsFromCatogory } from "./jetshop";
+  import type translations from "./translations.json";
 
-  export let api: MountProps['api'];
-  export let data: MountProps['data'];
-  export let track: MountProps['track'];
+  export let api: MountProps["api"];
+  export let data: MountProps["data"];
+  export let track: MountProps["track"];
+  export let t: TranslationsFn<keyof typeof translations>;
 
   const formatter = createFormatter(data.order.culture, data.order.currency);
 
@@ -20,11 +21,6 @@
     const products = res?.data?.product?.categories?.[0]?.products?.result;
 
     return products || [];
-  });
-
-  onMount(() => {
-    console.log('culture', data.order.culture);
-    culture.set(data.order.culture);
   });
 
   /**
@@ -45,7 +41,7 @@
 {#await productsPromise then products}
   <div class="grid gap-4 text-sm justify-center text-base-content">
     <h2 class="text-center text-xl">
-      {t('You might also be interested in these products')}
+      {t("You might also be interested in these products")}
     </h2>
     <ul class="flex gap-4">
       {#each products as product}
@@ -89,7 +85,7 @@
                 });
               }}
             >
-              {t('Add to cart')}
+              {t("Add to cart")}
             </button>
           </li>
         {/if}
@@ -99,7 +95,7 @@
 {/await}
 
 <style global lang="postcss">
-  @import 'tailwindcss/base';
-  @import 'tailwindcss/components';
-  @import 'tailwindcss/utilities';
+  @import "tailwindcss/base";
+  @import "tailwindcss/components";
+  @import "tailwindcss/utilities";
 </style>

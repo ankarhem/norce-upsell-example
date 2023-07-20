@@ -1,5 +1,11 @@
 # norce-upsell
 
+## 0.0.9
+
+### Patch Changes
+
+- use remote translations
+
 ## 0.0.8
 
 ### Patch Changes
