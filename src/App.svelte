@@ -39,11 +39,11 @@
 </script>
 
 {#await productsPromise then products}
-  <div class="grid gap-4 text-sm justify-center text-base-content">
+  <div class="grid gap-4 text-sm justify-center text-base-content p-4">
     <h2 class="text-center text-xl">
       {t("You might also be interested in these products")}
     </h2>
-    <ul class="flex gap-4">
+    <ul class="grid grid-cols-2 sm:flex gap-4">
       {#each products as product}
         {#if !product?.hasVariants}
           <li

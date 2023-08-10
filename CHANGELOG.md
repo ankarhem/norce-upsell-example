@@ -1,5 +1,11 @@
 # norce-upsell
 
+## 0.0.10
+
+### Patch Changes
+
+- add mobile styles
+
 ## 0.0.9
 
 ### Patch Changes
