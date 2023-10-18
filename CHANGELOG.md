@@ -1,5 +1,11 @@
 # norce-upsell
 
+## 0.0.11
+
+### Patch Changes
+
+- update deps
+
 ## 0.0.10
 
 ### Patch Changes

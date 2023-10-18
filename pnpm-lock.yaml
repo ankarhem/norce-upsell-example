@@ -12,11 +12,11 @@ devDependencies:
     specifier: ^1.4.0
     version: 1.4.0(request-ip@3.3.0)(universal-cookie@4.0.4)(uuid@8.3.2)
   '@norce/checkout-lib':
-    specifier: 0.1.0-pre.20
-    version: 0.1.0-pre.20(openapi-typescript-fetch@1.1.3)(zod@3.21.4)
+    specifier: 0.1.0-pre.23
+    version: 0.1.0-pre.23(zod@3.21.4)
   '@norce/module-adapter-svelte':
-    specifier: 2.0.0-pre.21
-    version: 2.0.0-pre.21(@norce/checkout-lib@0.1.0-pre.20)(svelte@3.59.2)
+    specifier: 2.0.0-pre.25
+    version: 2.0.0-pre.25(@norce/checkout-lib@0.1.0-pre.23)(svelte@3.59.2)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^1.1.0
     version: 1.4.0(svelte@3.59.2)(vite@3.2.7)
@@ -409,23 +409,21 @@ packages:
       uuid: 8.3.2
     dev: true
 
-  /@norce/checkout-lib@0.1.0-pre.20(openapi-typescript-fetch@1.1.3)(zod@3.21.4):
-    resolution: {integrity: sha512-gc5ALh04vZdKOdehbbA1jetGG1mOu6O31ncbZOL2fRNgDITiQhnKh46fSvwUYpvjII8kkoLZj5WwHxfL8Psgtg==}
+  /@norce/checkout-lib@0.1.0-pre.23(zod@3.21.4):
+    resolution: {integrity: sha512-YjfAqNIUVjXlo/4LvdE1l/cw1sjWNBUknOxw06cCotEpIAYkaa8mamZzdTxnV6VBiWsXEiumVMVlBMLMnXXg+w==}
     peerDependencies:
-      openapi-typescript-fetch: ^1.x.x
       zod: ^3.x.x
     dependencies:
-      openapi-typescript-fetch: 1.1.3
       zod: 3.21.4
     dev: true
 
-  /@norce/module-adapter-svelte@2.0.0-pre.21(@norce/checkout-lib@0.1.0-pre.20)(svelte@3.59.2):
-    resolution: {integrity: sha512-PBcl6/qf7YfZpoKZ4wbr3gLLXRzjzs111RVPfkwsAn38UvAiL6KeOQLuzwIGUs7yBehDUbPwE/hiqc7nfGK1kQ==}
+  /@norce/module-adapter-svelte@2.0.0-pre.25(@norce/checkout-lib@0.1.0-pre.23)(svelte@3.59.2):
+    resolution: {integrity: sha512-t2BfpodFzLQ7VAd/oHr0YUGqfk5C0ibTG1Va0N9qaCH6OBF71cN3/wafh2f3mvCI+q4+E7/k51MZDZQKxva9Qw==}
     peerDependencies:
-      '@norce/checkout-lib': ^0.1.0-pre.20
-      svelte: ^3.x.x
+      '@norce/checkout-lib': ^0.1.0-pre.23
+      svelte: ^4.x.x
     dependencies:
-      '@norce/checkout-lib': 0.1.0-pre.20(openapi-typescript-fetch@1.1.3)(zod@3.21.4)
+      '@norce/checkout-lib': 0.1.0-pre.23(zod@3.21.4)
       svelte: 3.59.2
     dev: true
 
@@ -2123,11 +2121,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mimic-fn: 2.1.0
-    dev: true
-
-  /openapi-typescript-fetch@1.1.3:
-    resolution: {integrity: sha512-smLZPck4OkKMNExcw8jMgrMOGgVGx2N/s6DbKL2ftNl77g5HfoGpZGFy79RBzU/EkaO0OZpwBnslfdBfh7ZcWg==}
-    engines: {node: '>= 12.0.0', npm: '>= 7.0.0'}
     dev: true
 
   /opener@1.5.2:
